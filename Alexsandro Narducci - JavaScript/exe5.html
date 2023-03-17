@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alexsandro Narducci</title>
+    <script>
+        var alunos = new Array();
+        var maior_media = 0;
+        var menor_media = 10;
+        var aluno_maior_media = "";
+        var aluno_menor_media = "";
+
+        for (let i = 0; i < 3; i++) {
+            var aluno = prompt("Digite o nome do aluno:")
+            alunos.push(aluno)
+
+            var soma = 0;
+
+            for (let j = 0; j < 4; j++) {
+                var nota = parseFloat(prompt("Digite sua " + (j + 1) + "° nota"))
+                soma += nota;
+            }
+
+            var media = soma / 4;
+            document.write('O aluno: ' + alunos[i] + " teve a média = " + media + "<br>");
+
+            if (media > maior_media) {
+                maior_media = media;
+                aluno_maior_media = alunos[i];
+            }
+
+            if (media < menor_media) {
+                menor_media = media;
+                aluno_menor_media = alunos[i];
+            }
+        }
+
+        document.write("A maior média é: " + maior_media + " e pertence ao aluno: " + aluno_maior_media + "<br>");
+        document.write("A menor média é: " + menor_media + " e pertence ao aluno: " + aluno_menor_media + "<br>");
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

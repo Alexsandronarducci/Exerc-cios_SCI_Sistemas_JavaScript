@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alexsandro Narducci - exe3</title>
+    <script>
+
+        let continuar = true
+        while (continuar) {
+            let nome = prompt("Digite o nome do aluno:");
+            let nota1 = parseFloat(prompt("Digite a primeira nota:"));
+            let nota2 = parseFloat(prompt("Digite a segunda nota:"));
+            let nota3 = parseFloat(prompt("Digite a terceira nota:"));
+            let nota4 = parseFloat(prompt("Digite a quarta nota:"));
+
+            let media = (nota1 + nota2 + nota3 + nota4) / 4;
+
+            document.write("Aluno: " + nome + "<br>");
+            document.write("Média: " + media + "<br>");
+
+            if (media < 6) {
+                document.write("Resultado: Reprovado" + "<br>");
+            } else {
+                document.write("Resultado: Aprovado" + "<br>" +
+                    "------------------------------------------------------------------------------" + "<br>");
+            }
+
+            let resposta = prompt("Deseja continuar? Sim/Não");
+            if (resposta !== "Sim") {
+                continuar = false;
+            }
+
+
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
